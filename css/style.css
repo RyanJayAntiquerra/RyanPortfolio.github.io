@@ -1,0 +1,1909 @@
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+    --font-family: Outfit, sans-serif;
+    --bs-link-color-rgb: 13, 110, 253;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--font-family);
+}
+
+body {
+    background-image: linear-gradient(to top, #112e42, #081b29);
+}
+
+nav {
+    background-color: var(--bg-color);
+}
+.links > ul > li > ul.dropdown> li{
+    display: block;
+}
+.links > ul > li > ul.dropdown{
+    background-color: var(--second-bg-color);
+    height: 6rem;
+    width: 9rem;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+.links > ul > li > ul.dropdown > li{
+    text-align: center;
+    width: 100%;   
+}
+.links > ul > li > ul.dropdown > .drop1{
+    padding-top: 5px;
+    position: absolute;
+    left: 0px;
+    height: 3rem;
+}
+.links > ul > li > ul.dropdown > .drop1:hover::before{
+    content: '';
+    position: absolute;
+    background-color: #007bff;
+    top: 30px;
+    left: 1rem;
+    height: 2px;
+    width: 7rem;
+    transition: width 1s ease;
+}
+.links > ul > li > ul.dropdown > .drop2{
+    position: absolute;
+    left: 0px;
+    top: 3rem;
+    height: 3rem;
+}
+.links > ul > li > ul.dropdown > .drop2:hover::before{
+    content: '';
+    position: absolute;
+    background-color: #007bff;
+    top: 26px;
+    left: 0.4rem;
+    height: 2px;
+    width: 8.38rem; 
+}
+.links > ul > li > ul.dropdown > li> a{
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--text-color);
+    text-decoration: none;
+   
+}
+.links > ul > li > ul.dropdown>li:hover{
+    background-color: var();
+}
+.links > ul > li:hover > ul.dropdown{
+    display: block;
+}
+/*special*/
+.proj{
+    padding-right: 2rem;
+}
+#dropdown{
+    width: 15rem;
+}
+nav>.container-fluid>a>span {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+nav>.container-fluid>.navbar-brand>.cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1rem;
+    background-color: orange;
+    animation: blink-caret 0.8s step-end infinite;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        background-color: transparent;
+    }
+
+    50% {
+        background-color: orange;
+    }
+}
+
+.links {
+    height: 3rem;
+}
+
+.links>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .6rem;
+}
+
+.links>ul>li>a {
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+.nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 20px;
+    /* Adjust as needed */
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    /* Adjust color as needed */
+    transition: color 0.3s;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff;
+    /* Adjust underline color as needed */
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.nav-link.active::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Animation direction */
+.nav-link::before {
+    transform-origin: right;
+}
+
+.nav-link:hover::before {
+    transform-origin: left;
+}
+
+.nav-link.active::before {
+    transform-origin: left;
+}
+
+.offcanvas-header {
+    opacity: 1;
+    background-color: var(--bg-color);
+}
+
+.offcanvas-header>h5 {
+    color: var(--text-color);
+}
+
+.offcanvas-header>h5>span {
+    color: var(--main-color);
+}
+
+.offcanvas-body {
+    opacity: 1;
+    background-color: var(--bg-color);
+}
+.offcanvas-body a{
+    color: var(--text-color);
+}
+.offcanvas-body>.navbar-nav {
+    width: 8rem;
+    padding-left: 1rem;
+}
+
+.mainnet {
+    background: url(../image/ryan.png);
+    background-size: cover;
+    background-position: center;
+    padding-left: 1rem;
+    padding-top: 3rem;
+    height: 40rem;
+    margin-top: 3.5rem;
+    width: 100%;
+    background-color: var(--bg-color);
+    z-index: 2;
+    animation: loadsUp 0.7s ease-in-out;
+}
+
+@keyframes loadsUp {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.mainnet>.main-content {
+    color: white;
+
+    transition: 0.5s;
+}
+
+.main-content>.header>h2 {
+    font-weight: 700;
+}
+
+.main-content>.header>h1 {
+    font-weight: 800;
+    font-size: 3.2rem;
+
+}
+
+.main-content>.description {
+    padding-top: 10px;
+    text-align: start;
+    width: 90%;
+}
+
+.main-content>.description>p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    font-size: 13px;
+    line-height: 1.5rem;
+    transition: 0.5s;
+}
+
+.main-content>.buttons {
+    transition: 0.5s;
+    height: 2rem;
+}
+
+.main-content>.buttons>.btn {
+    margin-right: 0.7rem;
+    border-radius: 0.6rem;
+    border: 1px solid var(--main-color);
+    color: var(--text-color);
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transition: 1s;
+}
+
+.main-content .buttons .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: right 0.3s ease;
+    z-index: -1;
+}
+
+.main-content .buttons .btn:hover::before {
+    right: 0;
+    /* Move pseudo-element to fill from right to left */
+}
+
+.main-content .buttons .btn:hover {
+    color: black;
+    /* Change text color on hover */
+}
+
+.home-sci {
+    padding-top: 20px;
+    display: flex;
+    justify-content: start;
+    width: 15rem;
+}
+
+.home-sci>a {
+    margin-right: 20px;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: .1rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.about-me {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-left: 1rem;
+    height: 20rem;
+    padding-top: 1rem;
+    width: 100%;
+    background-color: var(--bg-color);
+    z-index: 2;
+    animation: loadsUp 0.5s ease-in-out;
+}
+
+.about-me>.aboutmetext>h1 {
+    font-weight: 800;
+    padding-bottom: 1rem;
+    color: white;
+}
+
+.about-me>.aboutmetext>h1>span {
+    color: var(--main-color);
+}
+
+.about-me>.my-img>img {
+    border-radius: 50%;
+    height: 110px;
+}
+
+.about-me>.my-description {
+    padding-top: 1rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-me>.my-description>p {
+    transition: 0.5s;
+}
+
+.exp-text {
+    text-align: center;
+    height: 2rem;
+    background-color: var(--bg-color);
+    animation: loadsUp 0.7s ease-in-out;
+    z-index: 6;
+}
+
+.exp-text>h1 {
+    color: white;
+    font-weight: 800;
+
+}
+
+.exp-text>h1>span {
+    color: var(--main-color);
+}
+
+.real-exp {
+    gap: 6rem;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    padding-left: 1rem;
+    height: 40rem;
+    padding-top: 3rem;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--bg-color);
+    transition: 1s;
+    animation: loadsUp 0.7s ease-in-out;
+}
+
+.my-exp {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 30rem;
+}
+
+.my-exp>.exp-text>h1 {
+    padding-bottom: 1rem;
+    color: white;
+}
+
+.my-exp>.exp-text>h1>span {
+    color: var(--main-color);
+}
+
+.my-exp>.elem1 {
+    color: var(--main-color);
+    height: 10rem;
+    width: 30rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .4rem;
+    padding: 1rem 1rem;
+    align-self: flex-start;
+}
+
+.my-exp>.elem1>.hider {
+    padding-bottom: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.my-exp>.elem1>.hider>svg {
+    margin-right: .5rem;
+}
+
+.my-exp>.elem1>.hider>span {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.elem1>.name {
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+}
+
+.my-exp>.elem2>.hider {
+    padding-bottom: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.my-exp>.elem2>.hider>svg {
+    margin-right: .5rem;
+}
+
+.my-exp>.elem2>.hider>span {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.elem2>.name {
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+}
+
+.my-exp>.elem3>.hider {
+    padding-bottom: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.my-exp>.elem3>.hider>svg {
+    margin-right: .5rem;
+}
+
+.my-exp>.elem3>.hider>span {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.elem3>.name {
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+}
+
+.elem1::before {
+    content: '';
+    position: absolute;
+    top: 79.7rem;
+    left: 12.5rem;
+    height: 32rem;
+    width: 2px;
+    /* Thickness of the vertical line */
+    background-color: #007bff;
+    /* Color of the vertical line */
+}
+
+.elem1::after {
+    content: '';
+    position: absolute;
+    top: 79.5rem;
+    left: 12rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    background-color: #007bff;
+    /* Color of the vertical line */
+}
+
+.my-exp>.elem2 {
+    color: var(--main-color);
+    height: 10rem;
+    width: 30rem;
+    ;
+    border: .2rem solid var(--main-color);
+    border-radius: .4rem;
+    padding: 1rem 1rem;
+    align-self: flex-start;
+}
+
+.elem2::after {
+    content: '';
+    position: absolute;
+    top: 90.7rem;
+    left: 12rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    background-color: #007bff;
+    /* Color of the vertical line */
+}
+
+.my-exp>.elem3 {
+    color: var(--main-color);
+    height: 10rem;
+    width: 30rem;
+    ;
+    border: .2rem solid var(--main-color);
+    border-radius: .4rem;
+    padding: 1rem 1rem;
+    align-self: flex-start;
+
+}
+
+.elem3::after {
+    content: '';
+    position: absolute;
+    top: 101.6rem;
+    left: 12rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    background-color: #007bff;
+    /* Color of the vertical line */
+}
+
+.my-exp2 {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.my-exp2>.exp-text2>h1 {
+    padding-bottom: 1rem;
+    color: white;
+}
+
+.my-exp2>.exp-text2>h1>span {
+    padding-bottom: 1rem;
+    color: var(--main-color);
+}
+
+.my-exp2>.elem4 {
+    margin: 0 0 1rem 0;
+    margin-right: 2px;
+    color: var(--main-color);
+    height: 10rem;
+    width: 30rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .4rem;
+    padding: 1rem 1rem;
+
+}
+
+.my-exp2>.elem4>p {
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+}
+
+.my-exp2>.elem4>.hider {
+    padding-bottom: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.my-exp2>.elem4>.hider>svg {
+    margin-right: .5rem;
+}
+
+.my-exp2>.elem4>.hider>span {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.elem4::before {
+    content: '';
+    position: absolute;
+    top: 79.7rem;
+    left: 49rem;
+    height: 21rem;
+    width: 2px;
+    /* Thickness of the vertical line */
+    background-color: #007bff;
+    /* Color of the vertical line */
+}
+
+.elem4::after {
+    content: '';
+    position: absolute;
+    top: 79.4rem;
+    left: 48.5rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    background-color: #007bff;
+    /* Color of the vertical line */
+}
+
+.my-exp2>.elem5>p {
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+}
+
+.my-exp2>.elem5>.hider {
+    padding-bottom: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.my-exp2>.elem5>.hider>svg {
+    margin-right: .5rem;
+}
+
+.my-exp2>.elem5>.hider>span {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.elem5::after {
+    content: '';
+    position: absolute;
+    top: 90.4rem;
+    left: 48.5rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    background-color: #007bff;
+    /* Color of the vertical line */
+}
+
+.elem4>.name,
+i {
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+}
+
+.elem5>.name,
+i {
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+
+}
+
+.my-exp2>.elem5 {
+    margin: 0 0 1rem 0;
+    margin-right: 2px;
+    color: var(--main-color);
+    height: 10rem;
+    width: 30rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .4rem;
+    padding: 1rem 1rem;
+}
+
+.my-exp2>.elem6 {
+    margin: 0 0 1rem 0;
+    margin-right: 2px;
+    color: var(--main-color);
+    height: 10rem;
+    width: 30rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .4rem;
+    padding: 1rem 1rem;
+}
+
+.elem6>.name,
+i {
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+
+}
+
+.my-skills {
+    text-align: center;
+    height: 2rem;
+    padding-bottom: 3rem;
+    background-color: var(--bg-color);
+    animation: loadsUp 0.7s ease-in-out;
+}
+
+.my-skills>h1 {
+    color: white;
+    font-weight: 800;
+}
+
+.my-skills>h1>span {
+    color: var(--main-color);
+}
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    height: 25rem;
+    width: 100%;
+    background-color: var(--bg-color);
+    z-index: 2;
+    transition: 1s;
+    animation: loadsUp 0.7s ease-in-out;
+}
+
+.skills>.my-skills>h1 {
+    color: white;
+    padding-bottom: .5rem;
+}
+
+.skills>.my-skills>h1>span {
+    color: var(--main-color);
+}
+
+.skills>.table {
+    height: 20rem;
+    width: 25rem;
+    border: .2rem solid var(--main-color);
+    border-radius: 0.4rem;
+    justify-content: center;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.skills>.table:hover {
+    scale: 1.1;
+}
+
+.table>.progress-text {
+    justify-content: space-between;
+    margin: .5rem 0rem .1rem 2.5rem;
+    display: flex;
+    width: 20rem;
+    transition: 1s;
+}
+
+.table>.progress-text>h1 {
+    color: var(--main-color);
+    font-size: 15px;
+}
+
+.table>.progress {
+    margin: auto;
+    height: 2rem;
+    width: 19rem;
+    border: .1rem solid var(--main-color);
+    background-color: transparent;
+    margin-bottom: 1rem;
+    transition: 1s;
+}
+
+.progress>.bar {
+    margin-left: .3rem;
+    margin-top: .3rem;
+    border-radius: 0.2rem;
+    display: flex;
+    top: 2rem;
+    height: 1.2rem;
+    width: 16rem;
+    background-color: var(--main-color);
+    animation: loading 5s ease-in-out infinite;
+}
+
+@keyframes loading {
+    0% {
+        width: 5rem;
+    }
+
+    50% {
+        width: 16rem;
+    }
+
+    100% {
+        width: 5rem;
+    }
+
+}
+
+@keyframes loading2 {
+    0% {
+        width: 4rem;
+    }
+
+    50% {
+        width: 14rem;
+    }
+
+    100% {
+        width: 4rem;
+    }
+
+}
+
+@keyframes loading3 {
+    0% {
+        width: 3rem;
+    }
+
+    50% {
+        width: 13rem;
+    }
+
+    100% {
+        width: 3rem;
+    }
+
+}
+
+.progress>.bar2 {
+    display: flex;
+    margin-left: .3rem;
+    margin-top: .3rem;
+    border-radius: 0.2rem;
+    height: 1.2rem;
+    top: 2rem;
+    width: 4rem;
+    background-color: var(--main-color);
+    animation: loading2 5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.progress>.bar3 {
+    display: flex;
+    margin-left: .3rem;
+    margin-top: .3rem;
+    border-radius: 0.2rem;
+    height: 1.2rem;
+    top: 2rem;
+    width: 3rem;
+    background-color: var(--main-color);
+    animation: loading3 5s ease-in-out infinite;
+}
+
+.progress>.bar4 {
+    display: flex;
+    margin-left: .3rem;
+    margin-top: .3rem;
+    border-radius: 0.2rem;
+    height: 1.2rem;
+    top: 2rem;
+    width: 4rem;
+    background-color: var(--main-color);
+    animation: loading2 5s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.progress>.bar5 {
+    display: flex;
+    margin-left: .3rem;
+    margin-top: .3rem;
+    border-radius: 0.2rem;
+    height: 1.2rem;
+    top: 2rem;
+    width: 14rem;
+    background-color: var(--main-color);
+    animation: loading2 5s ease-in-out infinite;
+}
+
+.progress>.bar6 {
+    display: flex;
+    margin-left: .3rem;
+    margin-top: .3rem;
+    border-radius: 0.2rem;
+    height: 1.2rem;
+    top: 2rem;
+    width: 3rem;
+    background-color: var(--main-color);
+    animation: loading3 5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.progress>.bar7 {
+    display: flex;
+    margin-left: .3rem;
+    margin-top: .3rem;
+    border-radius: 0.2rem;
+    height: 1.2rem;
+    top: 2rem;
+    width: 3rem;
+    background-color: var(--main-color);
+    animation: loading4 5s ease-in-out infinite;
+    animation-delay: 0.7s;
+}
+
+@keyframes loading4 {
+    0% {
+        width: 3rem;
+    }
+
+    50% {
+        width: 12rem;
+    }
+
+    100% {
+        width: 3rem;
+    }
+
+}
+
+@keyframes loading5 {
+    0% {
+        width: 1rem;
+    }
+
+    50% {
+        width: 10rem;
+    }
+
+    100% {
+        width: 1rem;
+    }
+
+}
+
+.progress>.bar8 {
+    display: flex;
+    margin-left: .3rem;
+    margin-top: .3rem;
+    border-radius: 0.2rem;
+    height: 1.2rem;
+    top: 2rem;
+    width: 1rem;
+    background-color: var(--main-color);
+    animation: loading5 5s ease-in-out infinite;
+    animation-delay: 0.7s;
+}
+
+
+.contactme {
+    background: url(../image/ryan.png);
+    background-size: cover;
+    background-position: center;
+    padding-left: 1rem;
+    padding-top: 3rem;
+    height: 37rem;
+    width: 100%;
+    background-color: var(--bg-color);
+    z-index: 2;
+
+}
+
+.contactme>.my-contact {
+    margin-left: 10rem;
+    transition: 1s;
+}
+
+.contactme>.my-contact>.contact-header {
+    padding-bottom: 2rem;
+}
+
+.contactme>.my-contact>.contact-header>h1 {
+    color: var(--text-color);
+    font-weight: 800;
+}
+
+.contactme>.my-contact>.contact-header>h1>span {
+    color: var(--main-color);
+}
+
+.contactme>.my-contact>.listcontact {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    gap: 2rem;
+    transition: 1s;
+}
+
+.contactme>.my-contact>.listcontact>.linkedIn {
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+    align-items: center;
+    transition: 1s;
+}
+
+.contactme>.my-contact>.listcontact>.linkedIn>svg {
+    color: var(--main-color);
+}
+
+.contactme>.my-contact>.listcontact>.linkedIn>p {
+    font-size: 18px;
+    color: var(--text-color);
+    transition: 1s;
+}
+
+.contactme>.my-contact>.listcontact>.linkedIn>p>a {
+    text-decoration: none;
+    /* Remove underline */
+    list-style: none;
+    color: var(--text-color);
+    font-size: 18px;
+    transition: 1s;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    height: 2rem;
+    background-color: var(--second-bg-color);
+    z-index: 3;
+}
+
+.footer>p {
+    font-weight: lighter;
+    font-size: 14px;
+    color: white;
+    z-index: 3;
+}
+
+@keyframes loadsUp {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1000px) {
+    .links {
+        display: none !important;
+    }
+    .mainnet>.main-content {
+        padding-left: 2rem;
+    }
+
+    .mainnet>.main-content>.description {
+        line-height: 50px;
+        width: 70%;
+    }
+
+    .mainnet>.main-content>.description>p {
+        font-size: calc(15px + 0.3vw);
+        line-height: 30px;
+    }
+
+    .mainnet>.main-content>.home-sci {
+        padding-top: 2rem;
+    }
+
+    .main-content>.buttons>.btn {
+        padding-top: .6rem;
+        height: 3rem;
+        width: 10rem;
+        margin-right: 0.7rem;
+        border-radius: 0.6rem;
+        border: 1px solid var(--main-color);
+        color: var(--text-color);
+        font-weight: 600;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    .about-me {
+        padding-bottom: 22rem;
+    }
+
+
+    .about-me>.my-description {
+        width: 80%;
+    }
+
+    .about-me>.my-description>p {
+        font-size: calc(15px + 0.3vw);
+        line-height: 2rem;
+    }
+
+    .real-exp {
+        gap: 1rem;
+        height: 61rem;
+        display: flex;
+        flex-direction: column;
+        padding-left: 3rem;
+        padding-bottom: 4rem;
+    }
+
+    .real-exp>.my-exp>.elem1 {
+        width: calc(30rem + 20vw);
+    }
+
+    .real-exp>.my-exp>.elem2 {
+        width: calc(30rem + 20vw);
+    }
+
+    .real-exp>.my-exp>.elem3 {
+        width: calc(30rem + 20vw);
+    }
+
+    .real-exp>.my-exp2>.elem4 {
+        width: calc(30rem + 20vw);
+    }
+
+    .real-exp>.my-exp2>.elem5 {
+        width: calc(30rem + 20vw);
+    }
+
+    .real-exp>.my-exp>.elem1::after {
+        top: 71rem;
+        left: 1rem;
+    }
+
+    .real-exp>.my-exp>.elem2::after {
+        top: 82rem;
+        left: 1rem;
+    }
+
+    .real-exp>.my-exp>.elem3::after {
+        top: 93rem;
+        left: 1rem;
+    }
+
+    .real-exp>.my-exp2>.elem4::after {
+        top: 104rem;
+        left: 1rem;
+    }
+
+    .real-exp>.my-exp2>.elem5::after {
+        top: 115rem;
+        left: 1rem;
+    }
+
+    .real-exp>.my-exp>.elem1::before {
+        top: 71rem;
+        height: 54rem;
+        left: 1.5rem;
+    }
+
+    .real-exp>.my-exp2>.elem4::before {
+        display: none;
+    }
+
+    .skills {
+        height: 50rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+    .navbar-toggler {
+        display: none !important;
+    }
+
+    .mainnet>.main-content {
+        padding-left: 2rem;
+    }
+
+    .mainnet>.main-content>.description {
+        padding-bottom: 1rem;
+        width: 55rem;
+    }
+
+    .mainnet>.main-content>.description>p {
+        font-size: 14px;
+        line-height: 3rem;
+    }
+
+    .mainnet>.main-content>.buttons {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .mainnet>.main-content>.buttons>.btn {
+        padding-top: 0.7rem;
+        height: 3rem;
+        width: 11rem;
+    }
+
+    .about-me>.my-description {
+        width: 46rem;
+    }
+
+    .real-exp {
+        gap: 1rem;
+        height: 60rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .real-exp>.my-exp {
+        padding-left: 4rem;
+        width: 60rem;
+    }
+
+    .real-exp>.my-exp>.elem1 {
+        width: calc(50rem + 7vw);
+    }
+
+    .real-exp>.my-exp>.elem1::before {
+        left: 3rem;
+        top: 69.9rem;
+        height: 54rem;
+    }
+
+    .real-exp>.my-exp>.elem1::after {
+        top: 69.5rem;
+        left: 2.5rem;
+    }
+
+    .real-exp>.my-exp>.elem2::after {
+        top: 80.8rem;
+        left: 2.5rem;
+    }
+
+    .real-exp>.my-exp>.elem3::after {
+        top: 91.6rem;
+        left: 2.5rem;
+    }
+
+    .real-exp>.my-exp2>.elem4::after {
+        top: 102.5rem;
+        left: 2.5rem;
+    }
+
+    .real-exp>.my-exp2>.elem5::after {
+        top: 113.9rem;
+        left: 2.5rem;
+    }
+
+    .real-exp>.my-exp>.elem2 {
+        width: calc(50rem + 7vw);
+    }
+
+    .real-exp>.my-exp>.elem3 {
+        width: calc(50rem + 7vw);
+    }
+
+    .real-exp>.my-exp2>.elem4::before {
+        display: none;
+    }
+
+    .real-exp>.my-exp2 {
+        padding-left: 4rem;
+        width: 60rem;
+    }
+
+    .real-exp>.my-exp2>.elem4 {
+        width: calc(50rem + 7vw);
+    }
+
+    .real-exp>.my-exp2>.elem5 {
+        width: calc(50rem + 7vw);
+    }
+
+    .real-exp>.my-exp2>.elem6 {
+        width: calc(50rem + 7vw);
+    }
+
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1300px) {
+    .navbar-toggler {
+        display: none !important;
+    }
+
+    .mainnet>.main-content {
+        padding-left: 2rem;
+    }
+
+    .mainnet>.main-content>.description {
+        padding-bottom: 1rem;
+        width: 63rem;
+    }
+
+    .mainnet>.main-content>.description>p {
+        font-size: 16px;
+        line-height: 3rem;
+    }
+
+    .mainnet>.main-content>.buttons {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .mainnet>.main-content>.buttons>.btn {
+        padding-top: 0.7rem;
+        height: 3rem;
+        width: 11rem;
+    }
+
+    .about-me>.my-description {
+        width: 50rem;
+    }
+
+    .my-exp>.elem1::after {
+        top: 68.5rem;
+        left: 3rem;
+    }
+
+    .my-exp>.elem2::after {
+        top: 79.5rem;
+        left: 3rem;
+    }
+
+    .my-exp>.elem3::after {
+        top: 90.7rem;
+        left: 3rem;
+    }
+
+    .my-exp2>.elem4::after {
+        top: 68.5rem;
+        left: 39rem;
+    }
+
+    .my-exp2>.elem5::after {
+        top: 79.5rem;
+        left: 39rem;
+    }
+
+    .my-exp>.elem1::before {
+        top: 68.7rem;
+        left: 3.5rem;
+    }
+
+    .my-exp2>.elem4::before {
+        top: 68.7rem;
+        left: 39.5rem;
+    }
+}
+
+@media screen and (min-width: 1301px) and (max-width: 1349px) {
+    .navbar-toggler {
+        display: none !important;
+    }
+
+    .mainnet>.main-content {
+        padding-left: 2rem;
+    }
+
+    .mainnet>.main-content>.description {
+        padding-bottom: 1rem;
+        width: 63rem;
+    }
+
+    .mainnet>.main-content>.description>p {
+        font-size: 16px;
+        line-height: 3rem;
+    }
+
+    .mainnet>.main-content>.buttons {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .mainnet>.main-content>.buttons>.btn {
+        padding-top: 0.7rem;
+        height: 3rem;
+        width: 11rem;
+    }
+
+    .about-me>.my-description {
+        width: 50rem;
+    }
+
+    .my-exp>.elem1::after {
+        top: 68.5rem;
+        left: 6rem;
+    }
+
+    .my-exp>.elem2::after {
+        top: 79.5rem;
+        left: 6rem;
+    }
+
+    .my-exp>.elem3::after {
+        top: 90.7rem;
+        left: 6rem;
+    }
+
+    .my-exp2>.elem4::after {
+        top: 68.5rem;
+        left: 42rem;
+    }
+
+    .my-exp2>.elem5::after {
+        top: 79.5rem;
+        left: 42rem;
+    }
+
+    .my-exp>.elem1::before {
+        top: 68.7rem;
+        left: 6.5rem;
+    }
+
+    .my-exp2>.elem4::before {
+        top: 68.7rem;
+        left: 42.5rem;
+    }
+}
+
+@media screen and (min-width: 1350px) and (max-width: 1401px) {
+    .navbar-toggler {
+        display: none !important;
+    }
+
+    .mainnet>.main-content {
+        padding-left: 2rem;
+    }
+
+    .mainnet>.main-content>.description {
+        padding-bottom: 1rem;
+        width: 63rem;
+    }
+
+    .mainnet>.main-content>.description>p {
+        font-size: 16px;
+        line-height: 3rem;
+    }
+
+    .mainnet>.main-content>.buttons {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .mainnet>.main-content>.buttons>.btn {
+        padding-top: 0.7rem;
+        height: 3rem;
+        width: 11rem;
+    }
+
+    .about-me>.my-description {
+        width: 50rem;
+    }
+
+    .my-exp>.elem1::after {
+        top: 68.5rem;
+        left: 7.5rem;
+    }
+
+    .my-exp>.elem2::after {
+        top: 79.5rem;
+        left: 7.5rem;
+    }
+
+    .my-exp>.elem3::after {
+        top: 90.7rem;
+        left: 7.5rem;
+    }
+
+    .my-exp2>.elem4::after {
+        top: 68.5rem;
+        left: 43.5rem;
+    }
+
+    .my-exp2>.elem5::after {
+        top: 79.5rem;
+        left: 43.5rem;
+    }
+
+    .my-exp>.elem1::before {
+        top: 68.7rem;
+        left: 8rem;
+    }
+
+    .my-exp2>.elem4::before {
+        top: 68.7rem;
+        left: 44rem;
+    }
+}
+
+@media screen and (min-width: 1401px) and (max-width: 1490px) {
+    .navbar-toggler {
+        display: none !important;
+    }
+
+    .mainnet>.main-content {
+        padding-left: 2rem;
+    }
+
+    .mainnet>.main-content>.description {
+        padding-bottom: 1rem;
+        width: 63rem;
+    }
+
+    .mainnet>.main-content>.description>p {
+        font-size: 17px;
+        line-height: 3rem;
+    }
+
+    .mainnet>.main-content>.buttons {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .mainnet>.main-content>.buttons>.btn {
+        padding-top: 0.7rem;
+        height: 3rem;
+        width: 11rem;
+    }
+
+    .about-me {
+        height: 28rem;
+        padding-bottom: 30rem;
+    }
+
+    .about-me>.my-description {
+        width: 60rem;
+    }
+
+    .about-me>.my-description>p {
+        font-size: 18px;
+        line-height: 2rem;
+    }
+
+    .about-me>.my-img>img {
+        height: 15rem;
+    }
+
+    .my-exp>.elem1::after {
+        top: 79.5rem;
+        left: 9.5rem;
+    }
+
+    .my-exp>.elem2::after {
+        top: 90.5rem;
+        left: 9.5rem;
+    }
+
+    .my-exp>.elem3::after {
+        top: 101.5rem;
+        left: 9.5rem;
+    }
+
+    .my-exp2>.elem4::after {
+        top: 79.5rem;
+        left: 45.5rem;
+    }
+
+    .my-exp2>.elem5::after {
+        top: 90s.5rem;
+        left: 45.5rem;
+    }
+
+    .my-exp>.elem1::before {
+        top: 79.7rem;
+        left: 10rem;
+    }
+
+    .my-exp2>.elem4::before {
+        top: 79.7rem;
+        left: 46rem;
+    }
+}
+
+@media screen and (min-width: 1491px) {
+    .navbar-toggler {
+        display: none !important;
+    }
+
+    .mainnet>.main-content {
+        padding-left: 2rem;
+    }
+
+    .mainnet>.main-content>.description {
+        padding-bottom: 1rem;
+        width: 65rem;
+    }
+
+    .mainnet>.main-content>.description>p {
+        font-size: 18px;
+        line-height: 3rem;
+    }
+
+    .mainnet>.main-content>.buttons {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .mainnet>.main-content>.buttons>.btn {
+        padding-top: 0.7rem;
+        height: 3rem;
+        width: 11rem;
+    }
+
+    .about-me {
+        height: 28rem;
+        padding-bottom: 30rem;
+    }
+
+    .about-me>.my-description {
+        width: 60rem;
+    }
+
+    .about-me>.my-description>p {
+        font-size: 18px;
+        line-height: 2rem;
+    }
+
+    .about-me>.my-img>img {
+        height: 15rem;
+    }
+
+}
+
+@media screen and (min-width: 421px) and (max-width: 700px) {
+    .links {
+        display: none !important;
+    }
+    .mainnet {
+        height: 42rem;
+    }
+
+    .mainnet>.main-content {
+        padding-left: calc(2rem + 0.3vw);
+    }
+
+    .mainnet>.main-content>.description {
+        width: calc(80% + 0.3vw);
+    }
+
+    .mainnet>.main-content>.description>p {
+        font-size: calc(15px + 0.3vw);
+        /* Increase font size with viewport width */
+    }
+
+    .about-me {
+        height: 22rem;
+    }
+
+    .real-exp {
+        gap: 1rem;
+        height: 58rem;
+        display: flex;
+        padding-bottom: 3rem;
+        flex-direction: column;
+    }
+
+    .real-exp>.my-exp,
+    .my-exp2 {
+        width: 24rem;
+        padding-left: 1rem;
+    }
+
+    .real-exp>.my-exp>.elem1 {
+        width: calc(20rem + 15vw);
+    }
+
+    .real-exp>.my-exp>.elem2 {
+        width: calc(20rem + 15vw);
+    }
+
+    .real-exp>.my-exp>.elem3 {
+        width: calc(20rem + 15vw);
+    }
+
+    .real-exp>.my-exp2>.elem4 {
+        width: calc(20rem + 15vw);
+    }
+
+    .real-exp>.my-exp2>.elem5 {
+        width: calc(20rem + 15vw);
+    }
+
+    .real-exp>.my-exp>.elem1::after {
+        top: 71rem;
+        left: .46rem;
+    }
+
+    .real-exp>.my-exp>.elem2::after {
+        top: 82rem;
+        left: .46rem;
+    }
+
+    .real-exp>.my-exp>.elem3::after {
+        top: 93rem;
+        left: .46rem;
+    }
+
+    .real-exp>.my-exp2>.elem4::after {
+        top: 104rem;
+        left: .46rem;
+    }
+
+    .real-exp>.my-exp2>.elem5::after {
+        top: 115rem;
+        left: .46rem;
+    }
+
+    .real-exp>.my-exp>.elem1::before {
+        top: 71rem;
+        height: 54rem;
+        left: 1rem;
+    }
+
+    .real-exp>.my-exp2>.elem4::before {
+        display: none;
+    }
+
+    .skills {
+        height: 45rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contactme>.my-contact {
+        margin-left: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    .links {
+        display: none !important;
+    }
+
+    .mainnet>.main-content {
+        padding-left: 1rem;
+    }
+
+    .mainnet>.main-content>.description>p {
+        font-size: 15px;
+    }
+
+    .about-me>.my-description {
+        font-size: 12px;
+    }
+
+    .real-exp {
+        gap: 1rem;
+        height: 58rem;
+        display: flex;
+        padding-bottom: 3rem;
+        flex-direction: column;
+    }
+
+    .real-exp>.my-exp,
+    .my-exp2 {
+        width: 20rem;
+        padding-left: 1rem;
+    }
+
+    .real-exp>.my-exp>.elem1 {
+        width: 20rem;
+        padding-left: 1rem;
+    }
+
+    .real-exp>.my-exp>.elem2 {
+        width: 20rem;
+        padding-left: 1rem;
+    }
+
+    .real-exp>.my-exp>.elem3 {
+        width: 20rem;
+        padding-left: 1rem;
+    }
+
+    .real-exp>.my-exp2>.elem4 {
+        width: 20rem;
+        padding-left: 1rem;
+    }
+
+    .real-exp>.my-exp2>.elem5 {
+        width: 20rem;
+        padding-left: 1rem;
+    }
+
+    .real-exp>.my-exp>.elem1::after {
+        top: 67rem;
+        left: 0.44rem;
+    }
+
+    .real-exp>.my-exp>.elem2::after {
+        top: 78rem;
+        left: 0.44rem;
+    }
+
+    .real-exp>.my-exp>.elem3::after {
+        top: 89rem;
+        left: 0.44rem;
+    }
+
+    .real-exp>.my-exp2>.elem4::after {
+        top: 100rem;
+        left: 0.44rem;
+    }
+
+    .real-exp>.my-exp2>.elem5::after {
+        top: 111rem;
+        left: 0.44rem;
+    }
+
+    .real-exp>.my-exp>.elem1::before {
+        height: 54rem;
+        top: 67rem;
+        left: 1rem;
+    }
+
+    .real-exp>.my-exp2>.elem4::before {
+        display: none;
+    }
+
+    .skills {
+        height: 45rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skills>.table {
+        width: 20rem;
+    }
+
+    .table>.progress-text {
+        justify-content: space-between;
+        margin: .5rem 0rem .1rem 1rem;
+        display: flex;
+        width: 18rem;
+    }
+
+    .contactme {
+        height: 30rem;
+    }
+
+    .contactme>.my-contact {
+        margin-left: 0.5rem;
+    }
+
+    .contactme>.my-contact>.listcontact>.linkedIn>svg {
+        height: 40px;
+        width: 40px;
+    }
+
+    .contactme>.my-contact>.listcontact>.linkedIn>p>a {
+        font-size: 15px;
+    }
+
+    .contactme>.my-contact>.listcontact>.linkedIn>p {
+        font-size: 15px;
+    }
+}

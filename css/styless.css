@@ -1,0 +1,1816 @@
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+    --third-color: #405D72;
+    --font-family: Outfit, sans-serif;
+    --bs-link-color-rgb: 13, 110, 253;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--font-family);
+}
+
+body {
+    background-image: linear-gradient(to top, #112e42, #081b29);
+
+}
+
+nav {
+    background-color: var(--bg-color);
+}
+
+nav>.container-fluid>a>span {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+nav>.container-fluid>.navbar-brand>.cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1rem;
+    background-color: orange;
+    animation: blink-caret 0.8s step-end infinite;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        background-color: transparent;
+    }
+
+    50% {
+        background-color: orange;
+    }
+}
+.links > ul > li > ul.dropdown> li{
+    display: block;
+}
+.links > ul > li > ul.dropdown{
+    background-color: var(--second-bg-color);
+    height: 6rem;
+    width: 9rem;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+.links > ul > li > ul.dropdown > li{
+    text-align: center;
+    width: 100%;   
+}
+.links > ul > li > ul.dropdown > .drop1{
+    padding-top: 5px;
+    position: absolute;
+    left: 0px;
+    height: 3rem;
+}
+.links > ul > li > ul.dropdown > .drop1:hover::before{
+    content: '';
+    position: absolute;
+    background-color: #007bff;
+    top: 30px;
+    left: 1rem;
+    height: 2px;
+    width: 7rem;
+    transition: width 1s ease;
+}
+.links > ul > li > ul.dropdown > .drop2{
+    position: absolute;
+    left: 0px;
+    top: 3rem;
+    height: 3rem;
+}
+.links > ul > li > ul.dropdown > .drop2:hover::before{
+    content: '';
+    position: absolute;
+    background-color: #007bff;
+    top: 26px;
+    left: 0.4rem;
+    height: 2px;
+    width: 8.38rem; 
+}
+.links > ul > li > ul.dropdown > li> a{
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--text-color);
+    text-decoration: none;
+   
+}
+.links > ul > li > ul.dropdown>li:hover{
+    background-color: var();
+}
+.links > ul > li:hover > ul.dropdown{
+    display: block;
+}
+/*special*/
+.proj{
+    padding-right: 2rem;
+}
+#dropdown{
+    width: 15rem;
+}
+.links {
+    height: 3rem;
+}
+
+.links>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .6rem;
+}
+
+.links>ul>li>a {
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+.nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 20px;
+    /* Adjust as needed */
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    /* Adjust color as needed */
+    transition: color 0.3s;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff;
+    /* Adjust underline color as needed */
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.nav-link.active::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Animation direction */
+.nav-link::before {
+    transform-origin: right;
+}
+
+.nav-link:hover::before {
+    transform-origin: left;
+}
+
+.nav-link.active::before {
+    transform-origin: left;
+}
+
+.offcanvas-header {
+    background-color: var(--bg-color);
+}
+
+.offcanvas-header>h5 {
+    color: var(--text-color);
+}
+
+.offcanvas-header>h5>span {
+    color: var(--main-color);
+}
+
+.offcanvas-body {
+    background-color: var(--bg-color);
+}
+.offcanvas-body a{
+    color: var(--text-color);
+ }
+.offcanvas-body>.navbar-nav {
+    width: 8rem;
+    padding-left: 1rem;
+}
+
+.mainnet {
+    height: 20rem;
+    margin-top: 3.5rem;
+    width: 100%;
+    background-image: linear-gradient(to top, #112e42, #081b29);
+    z-index: 2;
+    animation: loadsUp2 0.5s ease-in-out;
+}
+
+@keyframes loadsUp2 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.mainnet>.main-content {
+    padding: 7rem 0 0 0;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+
+}
+
+.main-content>.header>h1 {
+    font-weight: 600;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.mainnet>.main-content>.header>p {
+    letter-spacing: 1px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    height: 78rem;
+    background-image: linear-gradient(to bottom, #112e42, #081b29);
+    animation: loadsUp2 0.7s ease-in-out;
+}
+
+.projects>.firstProject {
+    display: flex;
+    height: 18rem;
+    width: 90rem;
+}
+
+.projects>.firstProject>.picture {
+    height: 16rem;
+    width: 30rem;
+    margin: 1rem 1rem 0rem 5rem;
+}
+
+.projects>.firstProject>.picture>img {
+    width: 100%;
+    height: 100%;
+}
+
+.projects>.firstProject>.des {
+    color: var(--text-color);
+    width: 50rem;
+    height: 8rem;
+    margin: auto;
+}
+
+.projects>.firstProject>.des>h2 {
+    font-weight: 800;
+}
+
+.projects>.secondProject {
+    display: flex;
+    height: 18rem;
+    width: 90rem;
+}
+
+.projects>.secondProject>.picture {
+    height: 16rem;
+    width: 30rem;
+    margin: 1rem 1rem 0rem 5rem;
+}
+
+.projects>.secondProject>.picture>img {
+    width: 100%;
+    height: 100%;
+}
+
+.projects>.secondProject>.des {
+    color: var(--text-color);
+    width: 50rem;
+    height: 8rem;
+    margin: auto;
+}
+
+.projects>.secondProject>.des>h2 {
+    font-weight: 800;
+}
+
+.projects>.thirdProject {
+    display: flex;
+    height: 18rem;
+    width: 90rem;
+}
+
+.projects>.thirdProject>.picture {
+    height: 16rem;
+    width: 30rem;
+    margin: 1rem 1rem 0rem 5rem;
+}
+
+.projects>.thirdProject>.picture>img {
+    width: 100%;
+    height: 100%;
+}
+
+.projects>.thirdProject>.des {
+    color: var(--text-color);
+    width: 50rem;
+    height: 8rem;
+    margin: auto;
+}
+
+.projects>.thirdProject>.des>h2 {
+    font-weight: 800;
+}
+
+.contactme {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 7rem;
+    height: 15rem;
+    gap: 5rem;
+}
+
+.contactme>.information,
+.connected {
+    height: 10rem;
+    width: 20rem;
+}
+
+.contactme>.connected>h5 {
+    padding-bottom: 1rem;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.contactme>.information>h5 {
+    padding-bottom: 1rem;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.contactme>.information>.location {
+    height: 3rem;
+    gap: 20px;
+    display: flex;
+}
+
+.contactme>.information>.location>svg {
+    color: blue;
+}
+
+.contactme>.information>.location>p {
+    letter-spacing: 0.7px;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 550;
+}
+
+.contactme>.connected {
+    text-align: center;
+
+}
+
+.contactme>.connected>.location2 {
+    height: 4rem;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.section {
+    height: 50rem;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #112e42, #081b29);
+    z-index: 2;
+}
+
+.section>.header {
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+}
+
+.section>.header>h1 {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.section>.section2 {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    align-items: center;
+    height: 35rem;
+}
+
+.section>.section2>.firstBox {
+    height: 27rem;
+    width: 20rem;
+    background-color: var(--third-color);
+    transition: 0.3s;
+}
+
+.section>.section2>.firstBox:hover {
+    scale: 1.1;
+}
+
+.section>.section2>.firstBox>.picture1 {
+    background: url(webdev.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 16rem;
+
+    margin: 1rem 1rem 1rem 1rem;
+}
+
+.section>.section2>.firstBox>.des {
+    margin: 1rem 1rem 1rem 1rem;
+    color: var(--text-color);
+}
+
+.section>.section2>.firstBox>.des>h3 {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.section>.section2>.firstBox>.des>p {
+    letter-spacing: 1px;
+}
+
+.section>.section2>.firstBox>.buts {
+    margin: 0 1rem 0 0;
+    text-align: end;
+}
+
+.section>.section2>.firstBox>.buts>a {
+    color: var(--text-color);
+}
+
+.section>.section2>.firstBox>.buts>.btn {
+    border-radius: 0;
+    margin-right: 0.7rem;
+    border: 2px solid var(--main-color);
+    color: var(--text-color);
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transition: 1s;
+}
+
+.section>.section2>.firstBox>.buts>.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: right 0.3s ease;
+    z-index: -1;
+}
+
+.section>.section2>.firstBox>.buts>.btn:hover::before {
+    right: 0;
+}
+
+.section>.section2>.firstBox>.buts>.btn:hover {
+    color: black;
+}
+
+.section>.section2>.secondBox {
+    height: 27rem;
+    width: 20rem;
+    background-color: var(--third-color);
+    transition: 0.3s ease;
+}
+
+.section>.section2>.secondBox:hover {
+    scale: 1.1;
+}
+
+.section>.section2>.secondBox>.des>h3 {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.section>.section2>.secondBox>.des>p {
+    letter-spacing: 1px;
+}
+
+.section>.section2>.secondBox>.picture2 {
+    background: url(webdev2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 16rem;
+
+    margin: 1rem 1rem 1rem 1rem;
+}
+
+.section>.section2>.secondBox>.des {
+    margin: 1rem 1rem 1rem 1rem;
+    color: var(--text-color);
+}
+
+.section>.section2>.secondBox>.buts {
+    margin: 0 1rem 0 0;
+    text-align: end;
+}
+
+.section>.section2>.secondBox>.buts>a {
+    color: var(--text-color);
+}
+
+.section>.section2>.secondBox>.buts>.btn {
+    border-radius: 0;
+    margin-right: 0.7rem;
+    border: 2px solid var(--main-color);
+    color: var(--text-color);
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transition: 1s;
+}
+
+.section>.section2>.secondBox>.buts>.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: right 0.3s ease;
+    z-index: -1;
+}
+
+.section>.section2>.secondBox>.buts>.btn:hover::before {
+    right: 0;
+}
+
+.section>.section2>.secondBox>.buts>.btn:hover {
+    color: black;
+}
+
+.about-me {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-left: 1rem;
+    height: 20rem;
+    padding-top: 1rem;
+    width: 100%;
+    background-color: var(--bg-color);
+    z-index: 2;
+}
+
+.about-me>.aboutmetext>h1 {
+    padding-bottom: 1rem;
+    color: white;
+}
+
+.about-me>.aboutmetext>h1>span {
+    color: var(--main-color);
+}
+
+.about-me>.my-img>img {
+    border-radius: 50%;
+    height: 110px;
+}
+
+.about-me>.my-description {
+    padding-top: 1rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-me>.my-description>p {
+    transition: 0.5s;
+}
+
+.exp-text {
+    text-align: center;
+    height: 2rem;
+    background-color: var(--bg-color);
+}
+
+.exp-text>h1 {
+    color: white;
+}
+
+.exp-text>h1>span {
+    color: var(--main-color);
+}
+
+.real-exp {
+    gap: 6rem;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    padding-left: 1rem;
+    height: 40rem;
+    padding-top: 3rem;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--bg-color);
+    transition: 1s;
+}
+
+.my-exp {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 30rem;
+}
+
+.my-exp>.exp-text>h1 {
+    padding-bottom: 1rem;
+    color: white;
+}
+
+.my-exp>.exp-text>h1>span {
+    color: var(--main-color);
+}
+
+.my-exp>.elem1 {
+    color: var(--main-color);
+    height: 10rem;
+    width: 30rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .4rem;
+    padding: 1rem 1rem;
+    align-self: flex-start;
+}
+
+.my-exp>.elem1>.hider {
+    padding-bottom: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.my-exp>.elem1>.hider>svg {
+    margin-right: .5rem;
+}
+
+.my-exp>.elem1>.hider>span {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.elem1>.name {
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+}
+
+.my-exp>.elem2>.hider {
+    padding-bottom: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.my-exp>.elem2>.hider>svg {
+    margin-right: .5rem;
+}
+
+.my-exp>.elem2>.hider>span {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.elem2>.name {
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+}
+
+.my-exp>.elem3>.hider {
+    padding-bottom: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.my-exp>.elem3>.hider>svg {
+    margin-right: .5rem;
+}
+
+.my-exp>.elem3>.hider>span {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.elem3>.name {
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+}
+
+.elem1::before {
+    content: '';
+    position: absolute;
+    top: 79.7rem;
+    left: 12.5rem;
+    height: 32rem;
+    width: 2px;
+    /* Thickness of the vertical line */
+    background-color: #007bff;
+    /* Color of the vertical line */
+}
+
+.elem1::after {
+    content: '';
+    position: absolute;
+    top: 79.5rem;
+    left: 12rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    background-color: #007bff;
+    /* Color of the vertical line */
+}
+
+.my-exp>.elem2 {
+    color: var(--main-color);
+    height: 10rem;
+    width: 30rem;
+    ;
+    border: .2rem solid var(--main-color);
+    border-radius: .4rem;
+    padding: 1rem 1rem;
+    align-self: flex-start;
+}
+
+.elem2::after {
+    content: '';
+    position: absolute;
+    top: 90.7rem;
+    left: 12rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    background-color: #007bff;
+    /* Color of the vertical line */
+}
+
+.my-exp>.elem3 {
+    color: var(--main-color);
+    height: 10rem;
+    width: 30rem;
+    ;
+    border: .2rem solid var(--main-color);
+    border-radius: .4rem;
+    padding: 1rem 1rem;
+    align-self: flex-start;
+
+}
+
+.elem3::after {
+    content: '';
+    position: absolute;
+    top: 101.6rem;
+    left: 12rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    background-color: #007bff;
+    /* Color of the vertical line */
+}
+
+.my-exp2 {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.my-exp2>.exp-text2>h1 {
+    padding-bottom: 1rem;
+    color: white;
+}
+
+.my-exp2>.exp-text2>h1>span {
+    padding-bottom: 1rem;
+    color: var(--main-color);
+}
+
+.my-exp2>.elem4 {
+    margin: 0 0 1rem 0;
+    margin-right: 2px;
+    color: var(--main-color);
+    height: 10rem;
+    width: 30rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .4rem;
+    padding: 1rem 1rem;
+
+}
+
+.my-exp2>.elem4>p {
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+}
+
+.my-exp2>.elem4>.hider {
+    padding-bottom: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.my-exp2>.elem4>.hider>svg {
+    margin-right: .5rem;
+}
+
+.my-exp2>.elem4>.hider>span {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.elem4::before {
+    content: '';
+    position: absolute;
+    top: 79.7rem;
+    left: 49rem;
+    height: 21rem;
+    width: 2px;
+    /* Thickness of the vertical line */
+    background-color: #007bff;
+    /* Color of the vertical line */
+}
+
+.elem4::after {
+    content: '';
+    position: absolute;
+    top: 79.4rem;
+    left: 48.5rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    background-color: #007bff;
+    /* Color of the vertical line */
+}
+
+.my-exp2>.elem5>p {
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+}
+
+.my-exp2>.elem5>.hider {
+    padding-bottom: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.my-exp2>.elem5>.hider>svg {
+    margin-right: .5rem;
+}
+
+.my-exp2>.elem5>.hider>span {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.elem5::after {
+    content: '';
+    position: absolute;
+    top: 90.4rem;
+    left: 48.5rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    background-color: #007bff;
+    /* Color of the vertical line */
+}
+
+.elem4>.name,
+i {
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+}
+
+.elem5>.name,
+i {
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+
+}
+
+.my-exp2>.elem5 {
+    margin: 0 0 1rem 0;
+    margin-right: 2px;
+    color: var(--main-color);
+    height: 10rem;
+    width: 30rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .4rem;
+    padding: 1rem 1rem;
+}
+
+.my-exp2>.elem6 {
+    margin: 0 0 1rem 0;
+    margin-right: 2px;
+    color: var(--main-color);
+    height: 10rem;
+    width: 30rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .4rem;
+    padding: 1rem 1rem;
+}
+
+.elem6>.name,
+i {
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+
+}
+
+.my-skills {
+    text-align: center;
+    height: 2rem;
+    padding-bottom: 3rem;
+    background-color: var(--bg-color);
+}
+
+.my-skills>h1 {
+    color: white;
+}
+
+.my-skills>h1>span {
+    color: var(--main-color);
+}
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    height: 25rem;
+    width: 100%;
+    background-color: var(--bg-color);
+    z-index: 2;
+    transition: 1s;
+}
+
+.skills>.my-skills>h1 {
+    color: white;
+    padding-bottom: .5rem;
+}
+
+.skills>.my-skills>h1>span {
+    color: var(--main-color);
+}
+
+.skills>.table {
+    height: 20rem;
+    width: 25rem;
+    border: .2rem solid var(--main-color);
+    border-radius: 0.4rem;
+    justify-content: center;
+    text-align: center;
+    transition: 1s;
+}
+
+.table>.progress-text {
+    justify-content: space-between;
+    margin: .5rem 0rem .1rem 2.5rem;
+    display: flex;
+    width: 20rem;
+    transition: 1s;
+}
+
+.table>.progress-text>h1 {
+    color: var(--main-color);
+    font-size: 15px;
+}
+
+.table>.progress {
+    margin: auto;
+    height: 2rem;
+    width: 19rem;
+    border: .1rem solid var(--main-color);
+    background-color: transparent;
+    margin-bottom: 1rem;
+    transition: 1s;
+}
+
+.progress>.bar {
+    margin-left: .3rem;
+    margin-top: .3rem;
+    border-radius: 0.2rem;
+    display: flex;
+    top: 2rem;
+    height: 1.2rem;
+    width: 16rem;
+    background-color: var(--main-color);
+
+}
+
+.progress>.bar2 {
+    display: flex;
+    margin-left: .3rem;
+    margin-top: .3rem;
+    border-radius: 0.2rem;
+    height: 1.2rem;
+    top: 2rem;
+    width: 15rem;
+    background-color: var(--main-color);
+}
+
+.progress>.bar3 {
+    display: flex;
+    margin-left: .3rem;
+    margin-top: .3rem;
+    border-radius: 0.2rem;
+    height: 1.2rem;
+    top: 2rem;
+    width: 14rem;
+    background-color: var(--main-color);
+
+}
+
+.progress>.bar4 {
+    display: flex;
+    margin-left: .3rem;
+    margin-top: .3rem;
+    border-radius: 0.2rem;
+    height: 1.2rem;
+    top: 2rem;
+    width: 15rem;
+    background-color: var(--main-color);
+}
+
+.progress>.bar5 {
+    display: flex;
+    margin-left: .3rem;
+    margin-top: .3rem;
+    border-radius: 0.2rem;
+    height: 1.2rem;
+    top: 2rem;
+    width: 14rem;
+    background-color: var(--main-color);
+}
+
+.progress>.bar6 {
+    display: flex;
+    margin-left: .3rem;
+    margin-top: .3rem;
+    border-radius: 0.2rem;
+    height: 1.2rem;
+    top: 2rem;
+    width: 13rem;
+    background-color: var(--main-color);
+}
+
+.progress>.bar7 {
+    display: flex;
+    margin-left: .3rem;
+    margin-top: .3rem;
+    border-radius: 0.2rem;
+    height: 1.2rem;
+    top: 2rem;
+    width: 12rem;
+    background-color: var(--main-color);
+}
+
+.progress>.bar8 {
+    display: flex;
+    margin-left: .3rem;
+    margin-top: .3rem;
+    border-radius: 0.2rem;
+    height: 1.2rem;
+    top: 2rem;
+    width: 10rem;
+    background-color: var(--main-color);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    height: 2rem;
+    background-color: var(--second-bg-color);
+    z-index: 3;
+}
+
+.footer>p {
+    font-weight: lighter;
+    font-size: 14px;
+    color: white;
+    z-index: 3;
+}
+
+@media screen and (min-width: 701px) and (max-width: 1000px) {
+
+    .links{
+        display: none !important;
+    }
+    .projects>.firstProject{
+        height: 60rem;
+        margin: auto;
+        width: 40rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .projects>.firstProject>.des{
+        margin: 1rem 0 3rem 0;
+        text-align: center;
+        font-size: 14px;
+        width: 100%;
+    } 
+    .projects>.secondProject{
+        height: 60rem;
+        margin: auto;
+        width: 40rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .projects>.secondProject>.des{
+        margin: 1rem 0 3rem 0;
+        text-align: center;
+        font-size: 14px;
+        width: 100%;
+    }
+    .projects>.thirdProject{
+        height: 30rem;
+        margin: auto;
+        width: 40rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .projects>.thirdProject>.des{
+        margin: 1rem 0 1rem 0;
+        text-align: center;
+        font-size: 14px;
+        width: 100%;
+    }
+    .contactme{
+        width: 34rem;
+        height: 30rem;
+        margin: auto;
+        padding-bottom: 5rem;
+    }
+    .contactme > .information>.location{
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+    .navbar-toggler {
+        display: none !important;
+    }
+    .projects>.firstProject {
+        margin: auto;
+        height: 13rem;
+        width: 60rem;
+    }
+    .projects>.firstProject> .des {
+        font-size: 15px;
+    }
+
+    .projects>.firstProject> .picture {
+        height: 10rem;
+        width: 23rem;
+        margin: 1rem 1rem 0rem 2rem;
+    }
+    .projects >.secondProject{
+        margin: auto;
+        height: 13rem;
+        width: 60rem;
+    }
+    .projects>.secondProject> .picture {
+        height: 10rem;
+        width: 23rem;
+        margin: 1rem 1rem 0rem 2rem;
+    }
+    .projects>.secondProject> .des {
+        font-size: 15px;
+    }
+    .projects >.thirdProject{
+        margin: auto;
+        height: 13rem;
+        width: 60rem;
+    }
+    .projects>.thirdProject> .picture {
+        height: 10rem;
+        width: 23rem;
+        margin: 1rem 1rem 0rem 2rem;
+    }
+    .projects>.thirdProject> .des {
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1300px) {
+    .navbar-toggler {
+        display: none !important;
+    }
+
+    .projects>.firstProject {
+        margin: auto;
+        height: 15rem;
+        width: 75rem;
+    }
+
+    .projects>.firstProject> .picture {
+        height: 12rem;
+        width: 26rem;
+        margin: 1rem 1rem 0rem 2rem;
+    }
+    .projects >.secondProject{
+        margin: auto;
+        height: 15rem;
+        width: 75rem;
+    }
+    .projects>.secondProject> .picture {
+        height: 12rem;
+        width: 26rem;
+        margin: 1rem 1rem 0rem 2rem;
+    }
+    .projects >.thirdProject{
+        margin: auto;
+        height: 15rem;
+        width: 75rem;
+    }
+    .projects>.thirdProject> .picture {
+        height: 12rem;
+        width: 26rem;
+        margin: 1rem 1rem 0rem 2rem;
+    }
+}
+
+@media screen and (min-width: 1301px) and (max-width: 1349px) {
+    .navbar-toggler {
+        display: none !important;
+    }
+
+    .mainnet>.main-content {
+        padding-left: 2rem;
+    }
+
+    .mainnet>.main-content>.description {
+        padding-bottom: 1rem;
+        width: 63rem;
+    }
+
+    .mainnet>.main-content>.description>p {
+        font-size: 16px;
+        line-height: 3rem;
+    }
+
+    .mainnet>.main-content>.buttons {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .mainnet>.main-content>.buttons>.btn {
+        padding-top: 0.7rem;
+        height: 3rem;
+        width: 11rem;
+    }
+
+    .about-me>.my-description {
+        width: 50rem;
+    }
+
+    .my-exp>.elem1::after {
+        top: 68.5rem;
+        left: 6rem;
+    }
+
+    .my-exp>.elem2::after {
+        top: 79.5rem;
+        left: 6rem;
+    }
+
+    .my-exp>.elem3::after {
+        top: 90.7rem;
+        left: 6rem;
+    }
+
+    .my-exp2>.elem4::after {
+        top: 68.5rem;
+        left: 42rem;
+    }
+
+    .my-exp2>.elem5::after {
+        top: 79.5rem;
+        left: 42rem;
+    }
+
+    .my-exp>.elem1::before {
+        top: 68.7rem;
+        left: 6.5rem;
+    }
+
+    .my-exp2>.elem4::before {
+        top: 68.7rem;
+        left: 42.5rem;
+    }
+}
+
+@media screen and (min-width: 1350px) and (max-width: 1401px) {
+    .navbar-toggler {
+        display: none !important;
+    }
+
+    .mainnet>.main-content {
+        padding-left: 2rem;
+    }
+
+    .mainnet>.main-content>.description {
+        padding-bottom: 1rem;
+        width: 63rem;
+    }
+
+    .mainnet>.main-content>.description>p {
+        font-size: 16px;
+        line-height: 3rem;
+    }
+
+    .mainnet>.main-content>.buttons {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .mainnet>.main-content>.buttons>.btn {
+        padding-top: 0.7rem;
+        height: 3rem;
+        width: 11rem;
+    }
+
+    .about-me>.my-description {
+        width: 50rem;
+    }
+
+    .my-exp>.elem1::after {
+        top: 68.5rem;
+        left: 7.5rem;
+    }
+
+    .my-exp>.elem2::after {
+        top: 79.5rem;
+        left: 7.5rem;
+    }
+
+    .my-exp>.elem3::after {
+        top: 90.7rem;
+        left: 7.5rem;
+    }
+
+    .my-exp2>.elem4::after {
+        top: 68.5rem;
+        left: 43.5rem;
+    }
+
+    .my-exp2>.elem5::after {
+        top: 79.5rem;
+        left: 43.5rem;
+    }
+
+    .my-exp>.elem1::before {
+        top: 68.7rem;
+        left: 8rem;
+    }
+
+    .my-exp2>.elem4::before {
+        top: 68.7rem;
+        left: 44rem;
+    }
+}
+
+@media screen and (min-width: 1401px) and (max-width: 1490px) {
+    .navbar-toggler {
+        display: none !important;
+    }
+
+    .mainnet>.main-content {
+        padding-left: 2rem;
+    }
+
+    .mainnet>.main-content>.description {
+        padding-bottom: 1rem;
+        width: 63rem;
+    }
+
+    .mainnet>.main-content>.description>p {
+        font-size: 17px;
+        line-height: 3rem;
+    }
+
+    .mainnet>.main-content>.buttons {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .mainnet>.main-content>.buttons>.btn {
+        padding-top: 0.7rem;
+        height: 3rem;
+        width: 11rem;
+    }
+
+    .about-me {
+        height: 28rem;
+        padding-bottom: 30rem;
+    }
+
+    .about-me>.my-description {
+        width: 60rem;
+    }
+
+    .about-me>.my-description>p {
+        font-size: 18px;
+        line-height: 2rem;
+    }
+
+    .about-me>.my-img>img {
+        height: 15rem;
+    }
+
+    .my-exp>.elem1::after {
+        top: 79.5rem;
+        left: 9.5rem;
+    }
+
+    .my-exp>.elem2::after {
+        top: 90.5rem;
+        left: 9.5rem;
+    }
+
+    .my-exp>.elem3::after {
+        top: 101.5rem;
+        left: 9.5rem;
+    }
+
+    .my-exp2>.elem4::after {
+        top: 79.5rem;
+        left: 45.5rem;
+    }
+
+    .my-exp2>.elem5::after {
+        top: 90s.5rem;
+        left: 45.5rem;
+    }
+
+    .my-exp>.elem1::before {
+        top: 79.7rem;
+        left: 10rem;
+    }
+
+    .my-exp2>.elem4::before {
+        top: 79.7rem;
+        left: 46rem;
+    }
+}
+
+@media screen and (min-width: 1491px) {
+    .navbar-toggler {
+        display: none !important;
+    }
+
+    .mainnet>.main-content {
+        padding-left: 2rem;
+    }
+
+    .mainnet>.main-content>.description {
+        padding-bottom: 1rem;
+        width: 65rem;
+    }
+
+    .mainnet>.main-content>.description>p {
+        font-size: 18px;
+        line-height: 3rem;
+    }
+
+    .mainnet>.main-content>.buttons {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .mainnet>.main-content>.buttons>.btn {
+        padding-top: 0.7rem;
+        height: 3rem;
+        width: 11rem;
+    }
+
+    .about-me {
+        height: 28rem;
+        padding-bottom: 30rem;
+    }
+
+    .about-me>.my-description {
+        width: 60rem;
+    }
+
+    .about-me>.my-description>p {
+        font-size: 18px;
+        line-height: 2rem;
+    }
+
+    .about-me>.my-img>img {
+        height: 15rem;
+    }
+
+}
+
+@media screen and (min-width: 421px) and (max-width: 700px) {
+    .links {
+        display: none !important;
+    }
+    .projects{
+        height: 100rem;
+    }
+    .projects>.firstProject{
+        height: 60rem;
+        margin: auto;
+        width: 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .projects>.firstProject > .picture{
+        height: 15rem;
+        width: 25rem;
+        margin: auto;
+    }
+    .projects>.firstProject>.des{
+        margin: 1rem 0 5rem 0;
+        text-align: center;
+        font-size: 13px;
+        width: 100%;
+    } 
+    .projects>.firstProject>.des > h2{
+        margin: 1rem 0 1rem 0;
+        text-align: center;
+        font-size: 23px;
+        width: 100%;
+    } 
+    .projects>.secondProject{
+        height: 60rem;
+        margin: auto;
+        width: 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .projects>.secondProject > .picture{
+        height: 15rem;
+        width: 25rem;
+        margin: auto;
+    }
+    .projects>.secondProject>.des{
+        margin: 1rem 0 8rem 0;
+        text-align: center;
+        font-size: 13px;
+        width: 100%;
+    } 
+    .projects>.secondProject>.des > h2{
+        margin: 1rem 0 1rem 0;
+        text-align: center;
+        font-size: 23px;
+        width: 100%;
+    } 
+    .projects>.thirdProject{
+        height: 60rem;
+        margin: auto;
+        width: 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .projects>.thirdProject > .picture{
+        height: 15rem;
+        width: 25rem;
+        margin: auto;
+    }
+    .projects>.thirdProject>.des{
+        margin: 1rem 0 8rem 0;
+        text-align: center;
+        font-size: 13px;
+        width: 100%;
+    } 
+    .projects>.thirdProject>.des > h2{
+        margin: 1rem 0 1rem 0;
+        text-align: center;
+        font-size: 23px;
+        width: 100%;
+    }
+    .contactme{
+        width: 34rem;
+        height: 30rem;
+        margin: auto;
+        padding-bottom: 5rem;
+    }
+    .projects > .contactme{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem 0 1rem;
+        width: 28rem;
+    }
+    .projects > .contactme > .information{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .projects > .contactme > .information > h5{
+        font-size: 20px;
+    }
+    .projects > .contactme > .information>.location > svg{
+        height: 1.5rem;
+        width: 1.4rem;
+    }
+    .projects > .contactme > .information>.location > p{
+        font-size: 12px;
+    }
+    
+
+}
+
+@media screen and (max-width: 420px) {
+    .links {
+        display: none !important;
+    }
+    .projects{
+        width: 100%;
+        height: 100rem;
+        transition: 1s;
+    }
+    .projects>.firstProject{
+        height: 30rem;
+        margin: auto;
+        padding-bottom: 2rem;
+        width: 21rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .projects>.firstProject > .picture{
+        height: 15rem;
+        width: 20rem;
+        margin: auto;
+    }
+    .projects>.firstProject>.des{
+        margin: 1rem 0 5rem 0;
+        text-align: center;
+        font-size: 13px;
+        width: 100%;
+    } 
+    .projects>.firstProject>.des > h2{
+        margin: 1rem 0 1rem 0;
+        text-align: center;
+        font-size: 23px;
+        width: 100%;
+    } 
+    .projects>.secondProject{
+        height: 60rem;
+        margin: auto;
+        width: 21rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .projects>.secondProject > .picture{
+        height: 15rem;
+        width: 20rem;
+        margin: auto;
+    }
+    .projects>.secondProject>.des{
+        margin: 1rem 0 8rem 0;
+        text-align: center;
+        font-size: 13px;
+        width: 100%;
+    } 
+    .projects>.secondProject>.des > h2{
+        margin: 1rem 0 1rem 0;
+        text-align: center;
+        font-size: 23px;
+        width: 100%;
+    } 
+    .projects>.thirdProject{
+        height: 60rem;
+        margin: auto;
+        width: 21rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .projects>.thirdProject > .picture{
+        height: 15rem;
+        width: 20rem;
+        margin: auto;
+    }
+    .projects>.thirdProject>.des{
+        margin: 1rem 0 8rem 0;
+        text-align: center;
+        font-size: 13px;
+        width: 100%;
+    } 
+    .projects>.thirdProject>.des > h2{
+        margin: 1rem 0 1rem 0;
+        text-align: center;
+        font-size: 23px;
+        width: 100%;
+    }
+    .contactme{
+        width: 34rem;
+        height: 30rem;
+        margin: auto;
+        padding-bottom: 5rem;
+    }
+    .projects > .contactme{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem 0 1rem;
+        width: 21rem;
+    }
+    .projects > .contactme > .information{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .projects > .contactme > .information > h5{
+        font-size: 20px;
+    }
+    .projects > .contactme > .information>.location > svg{
+        height: 1.5rem;
+        width: 1.4rem;
+    }
+    .projects > .contactme > .information>.location > p{
+        font-size: 12px;
+    }
+}
